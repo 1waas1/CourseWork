@@ -7,7 +7,7 @@ bot = telebot.TeleBot(TOKEN)
 
 
 
-keyboard = types.ReplyKeyboardMarkup()
+keyboard = types.ReplyKeyboardMarkup(row_width=2)
 url_button = types.KeyboardButton("Перейти в гугл")
 keyboard.add(url_button)
 
