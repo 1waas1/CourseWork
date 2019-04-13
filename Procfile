@@ -1,1 +1,1 @@
-bot: python3.7.2 bot_init.py
+bot: python3 bot_init.py
