@@ -7,8 +7,8 @@ bot = telebot.TeleBot(TOKEN)
 
 
 
-keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
-url_button = types.KeyboardButton(text="Перейти в гугл")
+keyboard = types.ReplyKeyboardMarkup()
+url_button = types.KeyboardButton("Перейти в гугл")
 keyboard.add(url_button)
 
 bot.polling()
