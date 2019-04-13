@@ -7,8 +7,11 @@ bot = telebot.TeleBot(TOKEN)
 
 
 markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-itembtna = types.KeyboardButton('a')
-itembtnv = types.KeyboardButton('v')
+a = types.KeyboardButton('a')
+v = types.KeyboardButton('v')
+markup.add(a, v)
 
-markup.add(itembtna, itembtnv)
-
+@bot.message_handler(func=lambda message: True)
+def text(message):
+    bot.reply_to(message, message.text, reply_markup = markup)
+bot.polling()
