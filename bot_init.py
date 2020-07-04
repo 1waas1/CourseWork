@@ -26,8 +26,6 @@ follow_btn = types.KeyboardButton('Відслідковувати')
 markup2.add(follow_btn)
 
 
-
-
 @bot.message_handler(commands= ["start"])
 def start_bot(message):
     chat_id = message.chat.id
