@@ -7,7 +7,7 @@ verify_ssl = true
 pymysql = "*"
 
 [packages]
-pyTelegramBotAPI = "3.7.1"
+pyTelegramBotAPI = "3.7.2"
 
 [requires]
 python_version = "3.8"
