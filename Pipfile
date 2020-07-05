@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pymysql = "*"
+beautifulsoup4 = "*"
 
 [packages]
 pyTelegramBotAPI = "3.7.2"
