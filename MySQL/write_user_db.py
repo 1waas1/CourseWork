@@ -1,12 +1,18 @@
 import pymysql.cursors
+from configparser import ConfigParser
 
+config = ConfigParser()
+config.read('../config.ini')
 
-connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='YAROSLAW1999',
-                             db='tg_bot',
-                             charset='utf8mb4',
+config_name = 'database'
+
+connection = pymysql.connect(host=config.get(config_name, 'host'),
+                             user=config.get(config_name, 'user'),
+                             password=config.get(config_name, 'password'),
+                             db=config.get(config_name, 'db_name'),
+                             charset=config.get(config_name, 'charset'),
                              cursorclass=pymysql.cursors.DictCursor)
+
 
 class WriteDb(object):
     def __init__(self, tg_id_user, name, username):
